@@ -3,14 +3,100 @@
 *****************************/
 
 html {
-  box-sizing: border-box; /* use IE box model */
+  box-sizing: border-box;
+  /* use IE box model */
 }
 
-*, *:before, *:after {
-  box-sizing: inherit; /* inherit allows for easy creation of a new box model context further down the tree */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /* inherit allows for easy creation of a new box model context further down the tree */
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
+  -moz-osx-font-smoothing: grayscale;
+  /* smoother rendering of fonts */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.45em;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+
+.logo a,
+.subscribe a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: .99em;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.header {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+    .header {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    .subscribe a {
+      border: 1px solid grey;
+      border-radius: 33px;
+      margin-right: 20px;
+    }
+  }
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
